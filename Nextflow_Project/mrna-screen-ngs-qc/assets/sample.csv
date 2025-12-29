@@ -1,0 +1,6 @@
+sample_id,construct_id,dose,timepoint,replicate,condition,fastq_1,fastq_2
+S1,C001,1,24h,1,control,data/fastq/S1_R1.fastq.gz,data/fastq/S1_R2.fastq.gz
+S2,C001,1,24h,2,control,data/fastq/S2_R1.fastq.gz,data/fastq/S2_R2.fastq.gz
+S3,C002,1,24h,1,treated,data/fastq/S3_R1.fastq.gz,data/fastq/S3_R2.fastq.gz
+S4,C002,1,24h,2,treated,data/fastq/S4_R1.fastq.gz,data/fastq/S4_R2.fastq.gz
+
