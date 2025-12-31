@@ -1,13 +1,11 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
-
-
+println "HELLO 1"
 include { FASTQC }        from './modules/fastqc.nf'
 include { FASTP }         from './modules/fastp.nf'
 include { SALMON_INDEX }  from './modules/salmon_index.nf'
 include { SALMON_QUANT }  from './modules/salmon_quant.nf'
 include { MULTIQC }       from './modules/multiqc.nf'
-
 workflow {
   Channel
     .fromPath(params.samplesheet)
@@ -30,10 +28,6 @@ workflow {
   // Trim/filter
   fp  = FASTP(samples_ch)
 
-
-
-
-
   // Build Salmon index (choose one path)
   def index_ch
   if (params.salmon_index) {
@@ -45,10 +39,10 @@ workflow {
   }  
 
   // Quantification
-  quants = SALMON_QUANT(fp.trimmed, index_ch)
+  sal = SALMON_QUANT(fp.trimmed, index_ch)
 
   // MultiQC (collects FastQC + fastp + salmon logs)
-  MULTIQC(params.outdir)
+  MULTIQC(fastqc_raw.out, fp.reports, sal.logs)
 
   // Publish results (optional if you use publishDir in modules)
   println "Done. See: ${params.outdir}"

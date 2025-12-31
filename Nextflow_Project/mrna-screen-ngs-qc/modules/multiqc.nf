@@ -16,8 +16,8 @@ process MULTIQC {
 
   script:
     """
-    mkdir -p input
-    cp -r . input/ || true
+    # mkdir -p input
+    # cp -r . input/ || true
     multiqc -f . -o .
     """
 }
