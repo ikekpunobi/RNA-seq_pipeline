@@ -1,6 +1,5 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
-println "HELLO 1"
 include { FASTQC }        from './modules/fastqc.nf'
 include { FASTP }         from './modules/fastp.nf'
 include { SALMON_INDEX }  from './modules/salmon_index.nf'
@@ -44,6 +43,6 @@ workflow {
   // MultiQC (collects FastQC + fastp + salmon logs)
   MULTIQC(fastqc_raw.out, fp.reports, sal.logs)
 
-  // Publish results (optional if you use publishDir in modules)
+  // Publish results
   println "Done. See: ${params.outdir}"
 }

@@ -1,0 +1,72 @@
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with important bug fixes and improvements is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+### salmon (selective-alignment-based) v1.9.0
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ index ] => { salmon_index }
+### [ libType ] => { A }
+### [ mates1 ] => { S2_R1.trim.fastq.gz }
+### [ mates2 ] => { S2_R2.trim.fastq.gz }
+### [ threads ] => { 4 }
+### [ output ] => { S2.quant }
+Logs will be written to S2.quant/logs
+-----------------------------------------
+| Loading contig table | Time = 948.21 us
+-----------------------------------------
+size = 5
+-----------------------------------------
+| Loading contig offsets | Time = 593.83 us
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 50.417 us
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 1.0492 ms
+-----------------------------------------
+size = 134
+Number of ones: 4
+Number of ones per inventory item: 512
+Inventory entries filled: 1
+-----------------------------------------
+| Loading contig boundaries | Time = 1.1409 ms
+-----------------------------------------
+size = 134
+-----------------------------------------
+| Loading sequence | Time = 376.71 us
+-----------------------------------------
+size = 14
+-----------------------------------------
+| Loading positions | Time = 286.42 us
+-----------------------------------------
+size = 77
+-----------------------------------------
+| Loading reference sequence | Time = 246.92 us
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 61.709 us
+-----------------------------------------
+[2025-12-31 21:22:35.983] [jointLog] [info] setting maxHashResizeThreads to 4
+[2025-12-31 21:22:35.984] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2025-12-31 21:22:35.984] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2025-12-31 21:22:35.985] [jointLog] [info] Setting consensusSlack to selective-alignment default of 0.35.
+[2025-12-31 21:22:35.985] [jointLog] [info] parsing read library format
+[2025-12-31 21:22:35.985] [jointLog] [info] There is 1 library.
+[2025-12-31 21:22:35.989] [jointLog] [info] Loading pufferfish index
+[2025-12-31 21:22:35.990] [jointLog] [info] Loading dense pufferfish index.
+[2025-12-31 21:22:35.999] [jointLog] [info] done
+Exception : [
+The following errors were detected with the read files
+======================================================
+ERROR: file [S2_R1.trim.fastq.gz] appears to be empty (i.e. it has size 0).  This is likely an error. Please re-run salmon with a corrected input file.
+
+]
+salmon quant was invoked improperly.
+For usage information, try salmon quant --help
+Exiting.

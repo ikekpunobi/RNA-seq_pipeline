@@ -1,0 +1,70 @@
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with important bug fixes and improvements is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+### salmon (selective-alignment-based) v1.9.0
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ index ] => { salmon_index }
+### [ libType ] => { A }
+### [ mates1 ] => { S4_R1.trim.fastq.gz }
+### [ mates2 ] => { S4_R2.trim.fastq.gz }
+### [ threads ] => { 4 }
+### [ output ] => { S4.quant }
+Logs will be written to S4.quant/logs
+-----------------------------------------
+| Loading contig table | Time = 895.58 us
+-----------------------------------------
+size = 5
+-----------------------------------------
+| Loading contig offsets | Time = 558.71 us
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 54 us
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 1.085 ms
+-----------------------------------------
+size = 134
+Number of ones: 4
+Number of ones per inventory item: 512
+Inventory entries filled: 1
+-----------------------------------------
+| Loading contig boundaries | Time = 4.5708 ms
+-----------------------------------------
+size = 134
+-----------------------------------------
+| Loading sequence | Time = 616.38 us
+-----------------------------------------
+size = 14
+-----------------------------------------
+| Loading positions | Time = 278.25 us
+-----------------------------------------
+size = 77
+-----------------------------------------
+| Loading reference sequence | Time = 324.46 us
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 65.166 us
+-----------------------------------------
+[2026-01-01 19:27:54.525] [jointLog] [info] setting maxHashResizeThreads to 4
+[2026-01-01 19:27:54.525] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2026-01-01 19:27:54.525] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2026-01-01 19:27:54.526] [jointLog] [info] Setting consensusSlack to selective-alignment default of 0.35.
+[2026-01-01 19:27:54.526] [jointLog] [info] parsing read library format
+[2026-01-01 19:27:54.526] [jointLog] [info] There is 1 library.
+[2026-01-01 19:27:54.530] [jointLog] [info] Loading pufferfish index
+[2026-01-01 19:27:54.531] [jointLog] [info] Loading dense pufferfish index.
+[2026-01-01 19:27:54.543] [jointLog] [info] done
+[2026-01-01 19:27:54.581] [jointLog] [info] Index contained 2 targets
+[2026-01-01 19:27:54.581] [jointLog] [info] Number of decoys : 0
+
+
+
+
+[2026-01-01 19:27:54.639] [jointLog] [warning] salmon was only able to assign 0 fragments to transcripts in the index, but the minimum number of required assigned fragments (--minAssignedFrags) was 10. This could be indicative of a mismatch between the reference and sample, or a very bad sample.  You can change the --minAssignedFrags parameter to force salmon to quantify with fewer assigned fragments (must have at least 1).
