@@ -6,22 +6,43 @@ include { SALMON_INDEX }  from './modules/salmon_index.nf'
 include { SALMON_QUANT }  from './modules/salmon_quant.nf'
 include { MULTIQC }       from './modules/multiqc.nf'
 include { FETCH_ENA_FASTQ } from './modules/fetch_ena_fastq.nf'
-workflow {
-  Channel
-    .fromPath(params.samplesheet)
-    .ifEmpty { error "Samplesheet not found: ${params.samplesheet}" }
-    .set { samplesheet_file }
 
-  // Parse CSV into a channel of sample records
-  samples_ch = samplesheet_file
-    .splitCsv(header: true)
-    .map { row ->
-      def sid = row.sample_id
-      def r1  = file(row.fastq_1)
-      def r2  = row.fastq_2 ? file(row.fastq_2) : null
-      tuple(sid, row.construct_id, row.condition, r1, r2)
+
+workflow {
+
+  if (params.ena_runs) {
+
+    // Comma-separated run accessions, e.g. "ERR1860765,ERR...."
+    runs_ch = Channel
+      .from(params.ena_runs.split(',')*.trim())
+      .filter { it }
+
+    fetched = FETCH_ENA_FASTQ(runs_ch)
+
+    // Convert fetched reads into your pipeline’s samples tuple:
+    // tuple(sample_id, construct_id, condition, read1, read2)
+    samples_ch = fetched.reads.map { run, layout, r1, r2 ->
+      tuple(run, "ENA", "human_rnaseq", r1, (layout == "PAIRED" ? r2 : null))
     }
 
+  } else {
+
+    Channel
+      .fromPath(params.samplesheet)
+      .ifEmpty { error "Samplesheet not found: ${params.samplesheet}" }
+      .set { samplesheet_file }
+
+    // Parse CSV into a channel of sample records
+    samples_ch = samplesheet_file
+      .splitCsv(header: true)
+      .map { row ->
+        def sid = row.sample_id
+        def r1  = file(row.fastq_1)
+        def r2  = row.fastq_2 ? file(row.fastq_2) : null
+        tuple(sid, row.construct_id, row.condition, r1, r2)
+      }
+  }
+  
   // QC raw reads
   fastqc_raw = FASTQC(samples_ch)
 
