@@ -5,6 +5,7 @@ include { FASTP }         from './modules/fastp.nf'
 include { SALMON_INDEX }  from './modules/salmon_index.nf'
 include { SALMON_QUANT }  from './modules/salmon_quant.nf'
 include { MULTIQC }       from './modules/multiqc.nf'
+include { FETCH_ENA_FASTQ } from './modules/fetch_ena_fastq.nf'
 workflow {
   Channel
     .fromPath(params.samplesheet)
