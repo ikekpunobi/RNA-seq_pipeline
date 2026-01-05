@@ -12,6 +12,20 @@ process FETCH_ENA_FASTQ {
     """
     set -euo pipefail
 
+    download() {
+      local url="\$1"
+      local out="\$2"
+
+      # -C - : resume partial downloads
+      # --retry / --retry-all-errors : retry on transient errors/timeouts
+      # --retry-delay : wait between retries
+      # --speed-time/--speed-limit : fail if transfer stalls too long (then retry)
+      curl -fL -C - \
+        --retry 10 --retry-all-errors --retry-delay 10 \
+        --speed-time 60 --speed-limit 1024 \
+        "\$url" -o "\$out"
+    }
+
     command -v curl >/dev/null 2>&1 || { echo "curl is required" >&2; exit 1; }
     command -v md5  >/dev/null 2>&1 || { echo "md5 is required (macOS has this by default)" >&2; exit 1; }
 
@@ -30,12 +44,12 @@ process FETCH_ENA_FASTQ {
 
     url1="https://\$fq1"
     echo "Downloading \$url1" >&2
-    curl -fL "\$url1" -o ${run}_1.fastq.gz
+    download "\$url1" "${run}_1.fastq.gz"
 
     if [ "\$layout" = "PAIRED" ]; then
       url2="https://\$fq2"
       echo "Downloading \$url2" >&2
-      curl -fL "\$url2" -o ${run}_2.fastq.gz
+      download "\$url2" "${run}_2.fastq.gz"
     else
       : > ${run}_2.fastq.gz
     fi

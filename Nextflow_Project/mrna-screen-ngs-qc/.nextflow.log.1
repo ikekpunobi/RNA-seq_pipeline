@@ -1,160 +1,161 @@
-Jan-01 14:25:46.071 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile docker --samplesheet assets/sample.csv --transcriptome_fasta data/ref/transcripts.fa --outdir results
-Jan-01 14:25:46.121 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.2
-Jan-01 14:25:46.137 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/ikekpunobi/.nextflow/plugins; core-plugins: nf-amazon@3.4.2,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.3,nf-k8s@1.2.2,nf-tower@1.17.3,nf-wave@1.16.1
-Jan-01 14:25:46.161 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Jan-01 14:25:46.162 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Jan-01 14:25:46.163 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Jan-01 14:25:46.173 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
-Jan-01 14:25:46.282 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Jan-01 14:25:46.300 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/nextflow.config
-Jan-01 14:25:46.301 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/nextflow.config
-Jan-01 14:25:46.316 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
-Jan-01 14:25:46.602 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [docker]
-Jan-01 14:25:46.621 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Jan-01 14:25:46.621 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Jan-01 14:25:46.632 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/ikekpunobi/.nextflow/secrets/store.json
-Jan-01 14:25:46.634 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4ed5a1b0] - activable => nextflow.secret.LocalSecretsProvider@4ed5a1b0
-Jan-01 14:25:46.635 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
-Jan-01 14:25:46.644 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [intergalactic_neumann] DSL2 - revision: c6e01e493e
-Jan-01 14:25:46.682 [main] DEBUG nextflow.Session - Session UUID: 377f0bdb-a0e9-4c5b-adcb-2e6d532871d6
-Jan-01 14:25:46.682 [main] DEBUG nextflow.Session - Run name: intergalactic_neumann
-Jan-01 14:25:46.682 [main] DEBUG nextflow.Session - Executor pool size: 10
-Jan-01 14:25:46.688 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Jan-01 14:25:46.691 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Jan-01 14:25:46.713 [main] DEBUG nextflow.cli.CmdRun - 
+Jan-02 18:08:47.375 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile docker --ena_runs ERR1860765 --transcriptome_fasta data/ref/transcripts.fa --outdir results
+Jan-02 18:08:47.446 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.2
+Jan-02 18:08:47.463 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/ikekpunobi/.nextflow/plugins; core-plugins: nf-amazon@3.4.2,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.3,nf-k8s@1.2.2,nf-tower@1.17.3,nf-wave@1.16.1
+Jan-02 18:08:47.484 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-02 18:08:47.485 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-02 18:08:47.487 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jan-02 18:08:47.499 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Jan-02 18:08:47.619 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-02 18:08:47.641 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/nextflow.config
+Jan-02 18:08:47.644 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/nextflow.config
+Jan-02 18:08:47.660 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Jan-02 18:08:47.961 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [docker]
+Jan-02 18:08:47.980 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jan-02 18:08:47.980 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jan-02 18:08:47.992 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/ikekpunobi/.nextflow/secrets/store.json
+Jan-02 18:08:47.993 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@21bd128b] - activable => nextflow.secret.LocalSecretsProvider@21bd128b
+Jan-02 18:08:47.995 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Jan-02 18:08:48.005 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [disturbed_gauss] DSL2 - revision: e24da3c9f0
+Jan-02 18:08:48.046 [main] DEBUG nextflow.Session - Session UUID: 89ab57b8-5af7-4d71-bdc9-d641d2752a61
+Jan-02 18:08:48.047 [main] DEBUG nextflow.Session - Run name: disturbed_gauss
+Jan-02 18:08:48.047 [main] DEBUG nextflow.Session - Executor pool size: 10
+Jan-02 18:08:48.053 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jan-02 18:08:48.056 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jan-02 18:08:48.088 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 25.10.2 build 10555
   Created: 28-11-2025 19:24 UTC (14:24 EDT)
   System: Mac OS X 14.6.1
   Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 17.0.10+7
   Encoding: UTF-8 (UTF-8)
-  Process: 92871@IKs-MacBook-Pro [192.168.1.10]
-  CPUs: 10 - Mem: 32 GB (121.6 MB) - Swap: 7 GB (633.1 MB)
-Jan-01 14:25:46.722 [main] DEBUG nextflow.Session - Work-dir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work [Mac OS X]
-Jan-01 14:25:46.722 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/bin
-Jan-01 14:25:46.729 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Jan-01 14:25:46.735 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
-Jan-01 14:25:46.736 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
-Jan-01 14:25:46.759 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Jan-01 14:25:46.766 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
-Jan-01 14:25:46.800 [main] DEBUG nextflow.Session - Session start
-Jan-01 14:25:46.946 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Jan-01 14:25:47.310 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FASTQC` matches process FASTQC
-Jan-01 14:25:47.316 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jan-01 14:25:47.316 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jan-01 14:25:47.327 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Jan-01 14:25:47.331 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=32 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
-Jan-01 14:25:47.333 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Jan-01 14:25:47.346 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC': maxForks=0; fair=false; array=0
-Jan-01 14:25:47.363 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FASTP` matches process FASTP
-Jan-01 14:25:47.364 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jan-01 14:25:47.364 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jan-01 14:25:47.364 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTP': maxForks=0; fair=false; array=0
-Jan-01 14:25:47.372 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jan-01 14:25:47.372 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jan-01 14:25:47.373 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SALMON_INDEX': maxForks=0; fair=false; array=0
-Jan-01 14:25:47.376 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SALMON_QUANT` matches process SALMON_QUANT
-Jan-01 14:25:47.377 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jan-01 14:25:47.377 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jan-01 14:25:47.377 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SALMON_QUANT': maxForks=0; fair=false; array=0
-Jan-01 14:25:47.379 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:MULTIQC` matches process MULTIQC
-Jan-01 14:25:47.380 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jan-01 14:25:47.380 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jan-01 14:25:47.381 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=0; fair=false; array=0
-Jan-01 14:25:47.383 [main] INFO  nextflow.script.BaseScript - Done. See: results
-Jan-01 14:25:47.384 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, SALMON_INDEX, MULTIQC, SALMON_QUANT, FASTP
-Jan-01 14:25:47.385 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
-Jan-01 14:25:47.388 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC
-Jan-01 14:25:47.388 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTP
-Jan-01 14:25:47.388 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SALMON_INDEX
-Jan-01 14:25:47.389 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SALMON_QUANT
-Jan-01 14:25:47.389 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
-Jan-01 14:25:47.389 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-  Script_8c75afb1de419095: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/modules/fastqc.nf
+  Process: 4503@IKs-MacBook-Pro [192.168.1.10]
+  CPUs: 10 - Mem: 32 GB (6.5 GB) - Swap: 3 GB (1.3 GB)
+Jan-02 18:08:48.098 [main] DEBUG nextflow.Session - Work-dir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work [Mac OS X]
+Jan-02 18:08:48.099 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/bin
+Jan-02 18:08:48.106 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jan-02 18:08:48.111 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jan-02 18:08:48.113 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Jan-02 18:08:48.135 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jan-02 18:08:48.143 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Jan-02 18:08:48.184 [main] DEBUG nextflow.Session - Session start
+Jan-02 18:08:48.372 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-02 18:08:48.642 [main] INFO  nextflow.script.BaseScript - HELLO 1
+Jan-02 18:08:48.667 [main] INFO  nextflow.script.BaseScript - HELLO 2
+Jan-02 18:08:48.721 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-02 18:08:48.722 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-02 18:08:48.728 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jan-02 18:08:48.732 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=32 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Jan-02 18:08:48.733 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jan-02 18:08:48.749 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FETCH_ENA_FASTQ': maxForks=0; fair=false; array=0
+Jan-02 18:08:48.769 [main] INFO  nextflow.script.BaseScript - FETCH outputs: [DataflowBroadcast around DataflowStream[?]]
+Jan-02 18:08:48.772 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FASTQC` matches process FASTQC
+Jan-02 18:08:48.774 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-02 18:08:48.774 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-02 18:08:48.774 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC': maxForks=0; fair=false; array=0
+Jan-02 18:08:48.777 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FASTP` matches process FASTP
+Jan-02 18:08:48.778 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-02 18:08:48.778 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-02 18:08:48.779 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTP': maxForks=0; fair=false; array=0
+Jan-02 18:08:48.788 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-02 18:08:48.788 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-02 18:08:48.788 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SALMON_INDEX': maxForks=0; fair=false; array=0
+Jan-02 18:08:48.792 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SALMON_QUANT` matches process SALMON_QUANT
+Jan-02 18:08:48.793 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-02 18:08:48.794 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-02 18:08:48.795 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SALMON_QUANT': maxForks=0; fair=false; array=0
+Jan-02 18:08:48.798 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:MULTIQC` matches process MULTIQC
+Jan-02 18:08:48.799 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-02 18:08:48.799 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-02 18:08:48.799 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=0; fair=false; array=0
+Jan-02 18:08:48.801 [main] INFO  nextflow.script.BaseScript - Done. See: results
+Jan-02 18:08:48.801 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, SALMON_INDEX, FETCH_ENA_FASTQ, MULTIQC, SALMON_QUANT, FASTP
+Jan-02 18:08:48.804 [main] DEBUG nextflow.Session - Igniting dataflow network (8)
+Jan-02 18:08:48.804 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCH_ENA_FASTQ
+Jan-02 18:08:48.805 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC
+Jan-02 18:08:48.805 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTP
+Jan-02 18:08:48.805 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SALMON_INDEX
+Jan-02 18:08:48.805 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SALMON_QUANT
+Jan-02 18:08:48.805 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+Jan-02 18:08:48.806 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_10ba8c70d55f18bd: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/modules/fetch_ena_fastq.nf
   Script_193f84e9654e6d8f: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/modules/salmon_index.nf
+  Script_7f3090b66155f75b: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/modules/salmon_quant.nf
+  Script_8c75afb1de419095: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/modules/fastqc.nf
+  Script_fb6e9c78e2e49a59: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/main.nf
   Script_72b97a014e3b5670: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/modules/fastp.nf
   Script_150a6776ae536705: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/modules/multiqc.nf
-  Script_7f3090b66155f75b: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/modules/salmon_quant.nf
-  Script_b26a50b5b7358f74: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/main.nf
-Jan-01 14:25:47.389 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Jan-01 14:25:47.389 [main] DEBUG nextflow.Session - Session await
-Jan-01 14:25:47.496 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:47.498 [Task submitter] INFO  nextflow.Session - [5b/ccde6f] Submitted process > FASTQC (S2)
-Jan-01 14:25:47.511 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:47.512 [Task submitter] INFO  nextflow.Session - [be/bde85f] Submitted process > FASTQC (S3)
-Jan-01 14:25:47.517 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:47.518 [Task submitter] INFO  nextflow.Session - [1f/364301] Submitted process > FASTP (S4)
-Jan-01 14:25:47.521 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:47.522 [Task submitter] INFO  nextflow.Session - [22/e0ba87] Submitted process > FASTQC (S1)
-Jan-01 14:25:48.646 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: FASTP (S4); status: COMPLETED; exit: 0; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/1f/36430114a656d5ef9d5a08a9f40ae8]
-Jan-01 14:25:48.647 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Jan-01 14:25:48.652 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:48.652 [Task submitter] INFO  nextflow.Session - [98/dd35b4] Submitted process > FASTP (S2)
-Jan-01 14:25:48.667 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Jan-01 14:25:49.237 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: FASTP (S2); status: COMPLETED; exit: 0; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/98/dd35b48a0a54bdc379392a86c6676d]
-Jan-01 14:25:49.242 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:49.243 [Task submitter] INFO  nextflow.Session - [96/98f4f4] Submitted process > FASTP (S1)
-Jan-01 14:25:49.781 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: FASTP (S1); status: COMPLETED; exit: 0; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/96/98f4f4645b7ad3b762d3e00a493793]
-Jan-01 14:25:49.785 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:49.785 [Task submitter] INFO  nextflow.Session - [4f/d3c853] Submitted process > FASTQC (S4)
-Jan-01 14:25:49.789 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:49.790 [Task submitter] INFO  nextflow.Session - [9b/661f3f] Submitted process > SALMON_INDEX (salmon_index)
-Jan-01 14:25:50.671 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: SALMON_INDEX (salmon_index); status: COMPLETED; exit: 0; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/9b/661f3fc9534ce67b4dfdd8aa7fafd1]
-Jan-01 14:25:52.282 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: FASTQC (S3); status: COMPLETED; exit: 0; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/be/bde85f9bcf5d3ca3fdf013596ddf8c]
-Jan-01 14:25:52.287 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:52.287 [Task submitter] INFO  nextflow.Session - [53/2e68ee] Submitted process > FASTP (S3)
-Jan-01 14:25:52.374 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: FASTQC (S1); status: COMPLETED; exit: 0; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/22/e0ba876e154aabd423f33571708830]
-Jan-01 14:25:52.386 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: FASTQC (S2); status: COMPLETED; exit: 0; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/5b/ccde6f39ec8596a427ee4a968adc4f]
-Jan-01 14:25:52.393 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:52.393 [Task submitter] INFO  nextflow.Session - [93/422aed] Submitted process > SALMON_QUANT (S4)
-Jan-01 14:25:52.887 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: FASTP (S3); status: COMPLETED; exit: 0; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/53/2e68eedcf6789b9a6abd03a554461d]
-Jan-01 14:25:52.890 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:52.891 [Task submitter] INFO  nextflow.Session - [88/0f8369] Submitted process > SALMON_QUANT (S2)
-Jan-01 14:25:52.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: SALMON_QUANT (S4); status: COMPLETED; exit: 1; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/93/422aedc6552404a73fbc4e780d133e]
-Jan-01 14:25:52.968 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jan-01 14:25:52.968 [Task submitter] INFO  nextflow.Session - [e1/efbcfb] Submitted process > SALMON_QUANT (S1)
-Jan-01 14:25:52.969 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
-  task: name=SALMON_QUANT (S4); work-dir=/Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/93/422aedc6552404a73fbc4e780d133e
-  error [nextflow.exception.ProcessFailedException]: Process `SALMON_QUANT (S4)` terminated with an error exit status (1)
-Jan-01 14:25:52.984 [TaskFinalizer-9] ERROR nextflow.processor.TaskProcessor - Error executing process > 'SALMON_QUANT (S4)'
+Jan-02 18:08:48.806 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jan-02 18:08:48.806 [main] DEBUG nextflow.Session - Session await
+Jan-02 18:08:48.901 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-02 18:08:48.904 [Task submitter] INFO  nextflow.Session - [1c/08d671] Submitted process > FETCH_ENA_FASTQ (ERR1860765)
+Jan-02 18:08:48.911 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-02 18:08:48.912 [Task submitter] INFO  nextflow.Session - [53/89dc77] Submitted process > SALMON_INDEX (salmon_index)
+Jan-02 18:08:49.301 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: FETCH_ENA_FASTQ (ERR1860765); status: COMPLETED; exit: 127; error: -; workDir: /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/1c/08d6719b5241b5018402f393afc132]
+Jan-02 18:08:49.301 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jan-02 18:08:49.307 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FETCH_ENA_FASTQ (ERR1860765); work-dir=/Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/1c/08d6719b5241b5018402f393afc132
+  error [nextflow.exception.ProcessFailedException]: Process `FETCH_ENA_FASTQ (ERR1860765)` terminated with an error exit status (127)
+Jan-02 18:08:49.320 [TaskFinalizer-1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'FETCH_ENA_FASTQ (ERR1860765)'
 
 Caused by:
-  Process `SALMON_QUANT (S4)` terminated with an error exit status (1)
+  Process `FETCH_ENA_FASTQ (ERR1860765)` terminated with an error exit status (127)
 
 
 Command executed:
 
-  salmon quant -i salmon_index -l A         -1 S4_R1.trim.fastq.gz -2 S4_R2.trim.fastq.gz         -p 4         -o S4.quant         2> S4.salmon.log
+  set -euo pipefail
+  apk add --no-cache curl coreutils
+  
+  tsv=$(curl -fsSL "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERR1860765&result=read_run&fields=run_accession,library_layout,fastq_ftp,fastq_md5&format=tsv")
+  line=$(printf "%s\n" "$tsv" | sed -n '2p')
+  [ -n "$line" ] || { echo "ENA returned no data for run: ERR1860765" >&2; exit 1; }
+  
+  layout=$(printf "%s" "$line" | cut -f2)
+  echo "$layout" > layout.txt
+  
+  fastq_ftp=$(printf "%s" "$line" | cut -f3)
+  fastq_md5=$(printf "%s" "$line" | cut -f4)
+  
+  IFS=';' read -r fq1 fq2 <<< "$fastq_ftp"
+  IFS=';' read -r md51 md52 <<< "$fastq_md5"
+  
+  url1="https://$fq1"
+  curl -fL "$url1" -o ERR1860765_1.fastq.gz
+  
+  if [ "$layout" = "PAIRED" ]; then
+    url2="https://$fq2"
+    curl -fL "$url2" -o ERR1860765_2.fastq.gz
+  fi
+  
+  if [ -n "${md51:-}" ]; then
+    echo "${md51}  ERR1860765_1.fastq.gz" | md5sum -c -
+  fi
+  if [ "$layout" = "PAIRED" ] && [ -n "${md52:-}" ]; then
+    echo "${md52}  ERR1860765_2.fastq.gz" | md5sum -c -
+  fi
 
 Command exit status:
-  1
+  127
 
 Command output:
   (empty)
 
 Command error:
   WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+  .command.sh: line 3: apk: command not found
 
 Work dir:
-  /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/93/422aedc6552404a73fbc4e780d133e
+  /Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/1c/08d6719b5241b5018402f393afc132
 
 Container:
-  quay.io/biocontainers/salmon:1.9.0--h7e5ed60_0
+  quay.io/biocontainers/fastp:0.23.4--h125f33a_4
 
-Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
-Jan-01 14:25:52.986 [TaskFinalizer-9] DEBUG nextflow.Session - Session aborted -- Cause: Process `SALMON_QUANT (S4)` terminated with an error exit status (1)
-Jan-01 14:25:52.995 [TaskFinalizer-9] DEBUG nextflow.Session - The following nodes are still active:
-[process] MULTIQC
-  status=ACTIVE
-  port 0: (queue) OPEN  ; channel: -
-  port 1: (queue) OPEN  ; channel: -
-  port 2: (queue) OPEN  ; channel: salmon_logs
-  port 3: (cntrl) -     ; channel: $
-
-Jan-01 14:25:53.004 [TaskFinalizer-9] WARN  n.processor.TaskPollingMonitor - Killing running tasks (3)
-Jan-01 14:25:53.037 [TaskFinalizer-9] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=8; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=1; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=3; succeedDuration=39.8s; failedDuration=1.9s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=5; peakCpus=10; peakMemory=18 GB; ]
-Jan-01 14:25:53.060 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Jan-01 14:25:53.190 [main] DEBUG nextflow.Session - Session await > all processes finished
-Jan-01 14:25:53.190 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Jan-01 14:25:53.192 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=8; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=1; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=3; succeedDuration=39.8s; failedDuration=1.9s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=5; peakCpus=10; peakMemory=18 GB; ]
-Jan-01 14:25:53.196 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Jan-01 14:25:53.204 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Jan-02 18:08:49.324 [TaskFinalizer-1] DEBUG nextflow.Session - Session aborted -- Cause: Process `FETCH_ENA_FASTQ (ERR1860765)` terminated with an error exit status (127)
+Jan-02 18:08:49.339 [TaskFinalizer-1] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Jan-02 18:08:49.348 [TaskFinalizer-1] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=0ms; failedDuration=358ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Jan-02 18:08:49.388 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jan-02 18:08:49.531 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jan-02 18:08:49.531 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-02 18:08:49.532 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=0ms; failedDuration=358ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Jan-02 18:08:49.537 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jan-02 18:08:49.549 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

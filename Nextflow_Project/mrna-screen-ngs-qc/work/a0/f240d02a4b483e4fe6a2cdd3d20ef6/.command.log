@@ -1,0 +1,19 @@
+Unable to find image 'quay.io/curl/curl:8.5.0' locally
+8.5.0: Pulling from curl/curl
+dc5fb0b7462d: Pulling fs layer
+90f58e8ca393: Pulling fs layer
+4ca545ee6d5d: Pulling fs layer
+4ca545ee6d5d: Verifying Checksum
+4ca545ee6d5d: Download complete
+dc5fb0b7462d: Verifying Checksum
+dc5fb0b7462d: Download complete
+dc5fb0b7462d: Pull complete
+90f58e8ca393: Verifying Checksum
+90f58e8ca393: Download complete
+90f58e8ca393: Pull complete
+4ca545ee6d5d: Pull complete
+Digest: sha256:de0d32e6d653e209581a85df0ff974a7a986e27057082361db31382807920d86
+Status: Downloaded newer image for quay.io/curl/curl:8.5.0
+Enter host password for user 'e':
+curl: (3) URL rejected: No host part in the URL
+curl: (3) URL rejected: No host part in the URL

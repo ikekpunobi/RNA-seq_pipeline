@@ -1,0 +1,2 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+/Users/ikekpunobi/Documents/GitHub/RNA_construct_test_pipeline/Nextflow_Project/mrna-screen-ngs-qc/work/c7/dca9807197c835f0b07c5906ca2f6f/.command.sh: line 3: apk: command not found
