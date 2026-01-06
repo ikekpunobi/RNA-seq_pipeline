@@ -1,0 +1,40 @@
+# Nextflow
+work/
+.nextflow/
+.nextflow.log*
+timeline.html
+report.html
+trace.txt
+.nf-test/
+
+# Results / large bioinf files
+results/
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.cram
+*.sra
+*.sam
+*.bai
+*.crai
+*.vcf.gz
+*.tbi
+*.fa.fai
+*.gzi
+# Nextflow
+work/
+results/
+.nextflow/
+.nextflow.log*
+timeline.html
+report.html
+trace.txt
+
+# Big bioinformatics artifacts (adjust as needed)
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.cram
+*.sra
