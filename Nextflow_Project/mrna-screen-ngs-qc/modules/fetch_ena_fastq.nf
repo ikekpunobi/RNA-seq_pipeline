@@ -6,7 +6,11 @@ process FETCH_ENA_FASTQ {
     val run
 
   output:
-    tuple val(run), path("layout.txt"), path("${run}_1.fastq.gz"), path("${run}_2.fastq.gz"), emit: reads
+    tuple val(run),
+          path("layout.txt"),
+          path("${run}_1.fastq.gz"),
+          path("${run}_2.fastq.gz") optional true,
+          emit: reads
 
   script:
     """
@@ -50,8 +54,6 @@ process FETCH_ENA_FASTQ {
       url2="https://\$fq2"
       echo "Downloading \$url2" >&2
       download "\$url2" "${run}_2.fastq.gz"
-    else
-      : > ${run}_2.fastq.gz
     fi
 
     if [ -n "\${md51:-}" ]; then

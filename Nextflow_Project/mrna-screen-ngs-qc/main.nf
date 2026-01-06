@@ -5,9 +5,7 @@ include { FASTP }         from './modules/fastp.nf'
 include { SALMON_INDEX }  from './modules/salmon_index.nf'
 include { SALMON_QUANT }  from './modules/salmon_quant.nf'
 include { MULTIQC }       from './modules/multiqc.nf'
-println "HELLO 1"
 include { FETCH_ENA_FASTQ } from './modules/fetch_ena_fastq.nf'
-println "HELLO 2"
 
 
 workflow {
@@ -49,7 +47,7 @@ workflow {
       samples_ch = fetched.reads.map { run, layout_file, r1, r2 ->
         def layout = layout_file.text.trim()
         tuple(run, "ENA", "human_rnaseq", r1, (layout == "PAIRED" ? r2 : null))
-}
+      }
   }
 
   // QC raw reads
