@@ -1,2 +1,0 @@
-Error response from daemon: No such container: nxf-itimVaJ5gjRmaDdno4AgHbyY
-WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested

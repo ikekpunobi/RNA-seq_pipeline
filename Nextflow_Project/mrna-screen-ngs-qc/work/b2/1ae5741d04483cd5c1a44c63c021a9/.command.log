@@ -1,4 +1,0 @@
-Unable to find image 'quay.io/alpine/alpine:3.20' locally
-docker: Error response from daemon: unauthorized: access to the requested resource is not authorized
-
-Run 'docker run --help' for more information
