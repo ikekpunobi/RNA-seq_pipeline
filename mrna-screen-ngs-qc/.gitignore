@@ -7,7 +7,7 @@ report.html
 trace.txt
 .nf-test/
 
-# Results / large bioinf files
+# Results / large files
 results/
 *.fastq
 *.fastq.gz
@@ -22,19 +22,3 @@ results/
 *.tbi
 *.fa.fai
 *.gzi
-# Nextflow
-work/
-results/
-.nextflow/
-.nextflow.log*
-timeline.html
-report.html
-trace.txt
-
-# Big bioinformatics artifacts (adjust as needed)
-*.fastq
-*.fastq.gz
-*.fq.gz
-*.bam
-*.cram
-*.sra
