@@ -12,15 +12,14 @@ workflow {
 
   if (params.ena_runs) {
 
-    // Comma-separated run accessions, e.g. "ERR1860765,ERR...."
+    // Comma-separated run accessions
     runs_ch = Channel
       .from(params.ena_runs.split(',')*.trim())
       .filter { it }
 
     fetched = FETCH_ENA_FASTQ(runs_ch)
 
-    // Convert fetched reads into your pipeline’s samples tuple:
-    // tuple(sample_id, construct_id, condition, read1, read2)
+    // Convert fetched reads into tuple
     samples_ch = fetched.reads.map { run, layout, r1, r2 ->
       tuple(run, "ENA", "human_rnaseq", r1, (layout == "PAIRED" ? r2 : null))
     }
@@ -35,15 +34,6 @@ workflow {
       .set { samplesheet_file }
 
     // Parse CSV into a channel of sample records
-    // samples_ch = samplesheet_file
-    //   .splitCsv(header: true)
-    //   .map { row ->
-    //     def sid = row.sample_id
-    //     def r1  = file(row.fastq_1)
-    //     def r2  = row.fastq_2 ? file(row.fastq_2) : null
-    //     tuple(sid, row.construct_id, row.condition, r1, r2)
-    //   }
-
       samples_ch = fetched.reads.map { run, layout_file, r1, r2 ->
         def layout = layout_file.text.trim()
         tuple(run, "ENA", "human_rnaseq", r1, (layout == "PAIRED" ? r2 : null))
