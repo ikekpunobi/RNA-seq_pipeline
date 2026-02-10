@@ -2,7 +2,6 @@ process FASTQC {
   tag "${sample_id}"
   publishDir "${params.outdir}/fastqc_raw", mode: 'copy'
 
-  // container "biocontainers/fastqc:v0.12.1_cv8"
   container "quay.io/biocontainers/fastqc:0.12.1--hdfd78af_0"
 
   input:
@@ -24,8 +23,4 @@ process FASTQC {
       fastqc -t ${task.cpus} ${read1} -o .
       """
     }
-    // def reads = read2 ? "${read1} ${read2}" : "${read1}"
-    // """
-    // fastqc -t ${task.cpus} ${reads}
-    // """
 }
