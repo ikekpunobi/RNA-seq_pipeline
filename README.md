@@ -5,6 +5,7 @@ This project is an end-to-end, reproducible RNA-seq analysis pipeline built usin
 
 The pipeline is designed to work seamlessly with both single-end and paired-end RNA-seq data, and can be executed locally, on HPC systems, or in the cloud using containerized environments.
 
+NOTE: This pipeline is demonstrated using publicly available RNA-seq data from ENA. No controlled-access or sensitive data are included.
 ---
 
 ## Key Features
