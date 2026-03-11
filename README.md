@@ -1,7 +1,7 @@
 # RNA-seq Analysis Pipeline (Nextflow + Salmon)
 
 ## Overview
-This project is an end-to-end, reproducible RNA-seq analysis pipeline built using Nextflow (DSL2). It automates the process from raw sequencing data retrieval to transcript-level quantification, with a strong emphasis on portability, reproducibility, and scalability.
+This project is an end-to-end, reproducible RNA-seq analysis pipeline built using Nextflow (DSL2). It automates the process from raw sequencing data retrieval to transcript-level quantification, while enabling portability, reproducibility, and scalability.
 
 The pipeline is designed to work seamlessly with both single-end and paired-end RNA-seq data, and can be executed locally, on HPC systems, or in the cloud using containerized environments.
 
