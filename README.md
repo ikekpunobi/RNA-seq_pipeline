@@ -126,18 +126,9 @@ This pipeline is intentionally modular and can be extended to include:
 ---
 
 ## Use Cases
-- Academic RNA-seq analysis
 - Construct or condition comparison
 - Method development and benchmarking
+- Academic RNA-seq analysis
 - Portfolio demonstration of reproducible bioinformatics workflows
-
----
-
-## Author Notes
-This project was developed to demonstrate production-quality bioinformatics pipeline design featuring real-world usability.
-
-It is suitable both as a research tool and as a portfolio artifact for computational biology and bioinformatics roles.
-
----
 
 
